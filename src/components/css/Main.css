@@ -1,0 +1,52 @@
+:root{
+    --life_yellow1: #c2db8b;
+    --life_yellow2: #6ee052;
+    --life_bg1: #1f4715;
+    --life_bg2: #0f3b02;
+}
+
+
+.gradient-bg{
+    width:100vw;
+    height: 100vh;
+    position: absolute;
+    top:0px;
+    bottom:0px;
+    right:0px;
+    left:0px;
+    background: linear-gradient(45deg,var(--life_yellow1),var(--life_yellow2));
+}
+
+
+
+/* These are used for background moing mouse blob(currently disabled) */
+#blob{
+    height: 250px;
+    aspect-ratio: 1;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    border-radius: 50%;
+    background: linear-gradient(45deg,var(--life_yellow1),var(--life_yellow2));
+    animation: rotate 20s infinite;
+}
+#blur{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    backdrop-filter: blur(150px);
+}
+
+@keyframes rotate{
+    from{
+        rotate: 0deg;
+    }
+    50%{
+        scale: 1 2;
+    }
+    to{
+        rotate:360deg;
+    }
+}
